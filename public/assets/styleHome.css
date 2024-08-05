@@ -1,0 +1,252 @@
+/* Estilos globales del cuerpo */
+body {
+    font-family: Arial, sans-serif; /* Fuente principal */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    background-color: #ffffff; /* Color de fondo blanco */
+    color: #333; /* Color del texto principal (gris oscuro) */
+    display: flex; /* Usar flexbox para el layout del cuerpo */
+    flex-direction: column; /* Dirección de los elementos hijos en columna */
+    min-height: 100vh; /* Altura mínima del cuerpo igual a la altura de la ventana */
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #003366; /* Color de fondo azul oscuro */
+    color: white; /* Color del texto en blanco */
+    padding: 10px 0; /* Padding vertical de 10px */
+    position: fixed; /* Posiciona el encabezado fijo en la parte superior */
+    width: 100%; /* Ancho completo */
+    top: 0; /* Aliniar al borde superior */
+    left: 0; /* Alinear al borde izquierdo */
+    z-index: 1000; /* Asegurar que el header esté por encima de otros elementos */
+}
+
+/* Estilos para la barra de navegación dentro del encabezado */
+nav {
+    display: flex; /* Usar flexbox para la barra de navegación */
+    justify-content: space-between; /* Espacio entre los elementos hijos */
+    align-items: center; /* Centrar elementos verticalmente */
+    padding: 0 20px; /* Padding horizontal de 20px */
+}
+
+/* Estilo para el logotipo dentro de la navegación */
+nav .logo {
+    font-size: 24px; /* Tamaño de fuente grande */
+    font-weight: bold; /* Texto en negrita */
+}
+
+/* Estilo para la lista de navegación */
+nav ul {
+    list-style: none; /* Eliminar puntos de la lista */
+    display: flex; /* Mostrar los elementos en línea */
+}
+
+/* Estilo para los elementos de la lista */
+nav ul li {
+    margin: 0 10px; /* Margen horizontal de 10px */
+}
+
+/* Estilo para los enlaces dentro de la lista de navegación */
+nav ul li a {
+    color: white; /* Color del texto en blanco */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 18px; /* Tamaño de fuente */
+    transition: color 0.3s; /* Transición suave del color */
+}
+
+/* Estilo para el efecto hover en los enlaces de navegación */
+nav ul li a:hover {
+    color: #f4f4f4; /* Cambiar a un tono más claro en hover */
+}
+
+/* Estilo para el contenido principal */
+main {
+    padding-top: 60px; /* Espacio para compensar el header fijo */
+    flex: 1; /* Permitir que el main crezca para llenar el espacio */
+}
+
+/* Estilo para la sección de ofertas */
+.offers {
+    background-color: #eee; /* Fondo azul claro */
+    padding: 20px; /* Padding alrededor */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Estilo para el título de ofertas */
+.offers h2 {
+    margin-bottom: 20px; /* Espacio inferior de 20px */
+}
+
+/* Estilo para el contenedor de tarjetas de oferta */
+.offer-cards {
+    display: flex; /* Usar flexbox para las tarjetas */
+    justify-content: center; /* Centrar las tarjetas */
+    gap: 20px; /* Espacio entre tarjetas */
+    padding: 20px; /* Padding alrededor */
+    width: 50%; /* Ancho del 50% */
+    text-align: center; /* Centrar el texto */
+}
+
+/* Estilo para cada tarjeta de oferta */
+.offer-card {
+    background: white; /* Fondo blanco */
+    padding: 20px; /* Padding interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    text-align: center; /* Centrar el texto */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+    margin: 5px; /* Margen pequeño */
+}
+
+/* Estilo para el efecto hover en las tarjetas de oferta */
+.offer-card:hover {
+    transform: translateY(-10px); /* Mover hacia arriba en hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Aumentar la sombra */
+}
+
+/* Estilo para las imágenes dentro de las tarjetas de oferta */
+.offer-card img {
+    max-width: 100%; /* Ancho máximo del 100% */
+    height: auto; /* Altura automática */
+    margin-bottom: 10px; /* Margen inferior de 10px */
+    text-align: center; /* Centrar la imagen */
+}
+
+/* Estilo para el precio original (tachado) */
+.original-price {
+    text-decoration: line-through; /* Texto tachado */
+    color: red; /* Color rojo */
+}
+
+/* Estilo para la sección de productos */
+.products {
+    display: grid; /* Usar grid layout */
+    grid-template-columns: repeat(4, 1fr); /* Cuatro columnas iguales */
+    gap: 20px; /* Espacio entre elementos */
+    padding: 20px; /* Padding alrededor */
+    background-color: #eee; /* Fondo azul claro */
+}
+
+/* Estilo para cada tarjeta de producto */
+.product-card {
+    background: white; /* Fondo blanco */
+    padding: 20px; /* Padding interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    text-align: center; /* Centrar el texto */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
+
+/* Estilo para el efecto hover en las tarjetas de producto */
+.product-card:hover {
+    transform: translateY(-10px); /* Mover hacia arriba en hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Aumentar la sombra */
+}
+
+/* Estilo para las imágenes dentro de las tarjetas de producto */
+.product-card img {
+    max-width: 100%; /* Ancho máximo del 100% */
+    height: auto; /* Altura automática */
+    margin-bottom: 10px; /* Margen inferior de 10px */
+}
+
+/* Estilo para los botones */
+button {
+    background-color: #003366; /* Fondo azul oscuro */
+    color: white; /* Texto en blanco */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Padding interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+/* Estilo para el efecto hover en los botones */
+button:hover {
+    background-color: #005bb5; /* Fondo azul más claro */
+    transform: scale(1.05); /* Aumentar tamaño en hover */
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #003366; /* Fondo azul oscuro */
+    color: white; /* Texto en blanco */
+    text-align: center; /* Centrar el texto */
+    padding: 20px; /* Padding interno */
+    position: relative; /* Posicionamiento relativo */
+    bottom: 0; /* Alinear al borde inferior */
+    width: 100%; /* Ancho completo */
+    margin-top: auto; /* Empujar el pie de página hacia el fondo */
+}
+
+/* Estilo para los enlaces de redes sociales en el pie de página */
+footer .social-media a {
+    color: white; /* Texto en blanco */
+    margin: 0 10px; /* Margen horizontal de 10px */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Estilo para la información de contacto en el pie de página */
+footer .contact-info p {
+    margin: 5px 0; /* Márgenes verticales de 5px */
+}
+
+/* Estilo para el efecto hover en los enlaces de redes sociales */
+footer .social-media a:hover {
+    color: #f4f4f4; /* Cambiar a un tono más claro en hover */
+}
+
+/* Estilo para todas las imágenes */
+img {
+    text-align: center; /* Centrar la imagen */
+}
+
+/* Estilo para la tabla de items en el carrito */
+.cart-items {
+    width: 100%; /* Ancho completo */
+    border-collapse: collapse; /* Colapsar bordes */
+}
+
+/* Estilo para las celdas de la tabla */
+.cart-items td {
+    border: 0px solid #ddd; /* Sin borde visible */
+    text-align: center; /* Centrar el texto */
+    vertical-align: top; /* Alinear al borde superior */
+    width: 25%; /* Cada celda ocupa el 25% del ancho */
+}
+
+/* Estilo para las imágenes en el carrito */
+.cart-items img {
+    width: 100px; /* Ancho fijo de 100px */
+    height: auto; /* Altura automática */
+}
+
+/* Estilo para los títulos y párrafos en el carrito */
+.cart-items h3, .cart-items p {
+    margin: 10px 0; /* Márgenes verticales de 10px */
+}
+
+/* Estilo para los botones en la tabla de items */
+.cart-items button {
+    background-color: #003366; /* Fondo azul oscuro */
+    color: white; /* Texto en blanco */
+    border: none; /* Sin borde */
+    padding: 5px 10px; /* Padding interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+}
+
+/* Estilo para el efecto hover en los botones de la tabla */
+.cart-items button:hover {
+    background-color: #005bb5; /* Fondo azul más claro */
+    transform: scale(1.05); /* Aumentar tamaño en hover */
+}
+
+/* Estilo específico para el botón de pago */
+#pagar {
+    margin-left: 15px; /* Margen a la izquierda de 15px */
+}
+
+
